@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "*",
+    "mongodb": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "license": "ISC",
+  "description": "Blog"
+}
