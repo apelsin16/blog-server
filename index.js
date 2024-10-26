@@ -8,6 +8,8 @@ const posts = require("./routes/posts");
 const session = require("express-session");
 const { connectToDb } = require("./services/connect");
 
+require("dotenv").config();
+
 const app = express();
 
 app.use(
@@ -24,7 +26,7 @@ app.use(passport.session());
 
 require("./config/passport")(passport);
 
-app.use(cors());
+app.use(cors({ origin: process.env.CORS_ORIGIN }));
 
 app.use(bodyParser.json({ limit: "5mb" }));
 app.use(
@@ -35,7 +37,7 @@ app.use(
   })
 );
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 connectToDb()
   .then(() => {

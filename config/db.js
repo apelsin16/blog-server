@@ -1,5 +1,7 @@
+require("dotenv").config();
+
 module.exports = {
-    uri: 'mongodb+srv://apelsin16:YnA1xIoUa5KE34D3@cluster0.vdzto.mongodb.net/',
-    dbName: 'blog',
-    secret: "some_secret_key"
-}
+  uri: process.env.DB_URI,
+  dbName: process.env.DB_NAME,
+  secret: process.env.JWT_SECRET,
+};
